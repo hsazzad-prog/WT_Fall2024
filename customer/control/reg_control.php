@@ -1,4 +1,5 @@
 <?php
+session_start();
 $unanmeError="";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 $hasError=0;
@@ -53,11 +54,9 @@ if( $hasError>0)
     echo "Please insert correct data";
 }
 else{
+$_SESSION["uname"]=$_REQUEST["username"];
 
-    $data = ["username" => $_REQUEST["username"], "password" => $_REQUEST["password"]];
-$json = json_encode($data); // Encode to JSON
-
-file_put_contents("../files/userdata.json",$json);
+header("Location: ../view/profile.php"); 
 }
 
 }

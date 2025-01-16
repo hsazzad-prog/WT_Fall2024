@@ -1,0 +1,18 @@
+*{
+    background-color: antiquewhite;
+}
+#error{
+    color: red;
+}
+.btnSubmit{
+    background-color: green;
+}
+.btnReset{
+    background-color: red;
+}
+.btnShape{
+    width: 120px;
+    margin: 10px;
+    border: white solid;
+    border-radius: 10px;
+}
